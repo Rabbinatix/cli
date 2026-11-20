@@ -1,0 +1,58 @@
+{
+  "name": "rabbinatix",
+  "version": "0.1.0",
+  "description": "Rabbinatix in your terminal and in CI: what a code change affects, a system's test server, a security scan, whether code and the map are in step, test cases, safe-to-deploy and deployments, OpenAPI files and generated code. Runs fixed rules (no AI model) and sends no code.",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://rabbinatix.com/docs/rabbinatix-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabbinatix/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rabbinatix/cli/issues"
+  },
+  "type": "module",
+  "bin": {
+    "rabbinatix": "dist/rabbinatix.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "start": "node dist/rabbinatix.js",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "record-fixtures": "vitest run -c vitest.record.config.ts",
+    "sync": "node scripts/sync-from-app.mjs",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.2",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.2",
+    "vitest": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "rabbinatix",
+    "contracts",
+    "api",
+    "ci",
+    "impact",
+    "mock",
+    "security"
+  ]
+}

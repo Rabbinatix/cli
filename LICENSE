@@ -1,0 +1,29 @@
+Rabbinatix CLI licence
+
+Copyright (c) 2026 Rabbinatix. All rights reserved.
+
+This licence covers the `rabbinatix` package on npm (the "Software"). It is not open-source software.
+
+1. You may install and run the Software, on any number of computers and CI runners, to work with a Rabbinatix
+   workspace (https://rabbinatix.com), free of charge. Your use of the Rabbinatix service itself is under its terms
+   (https://rabbinatix.com/terms).
+
+2. You may not:
+   - modify the Software, or reverse engineer, decompile or disassemble it, except where the law allows it
+     despite this limit;
+   - sell, rent, sublicense or redistribute the Software, except as an unmodified copy fetched from npm as part
+     of your own build or CI set-up (for example a lock file, a cache or a container image you use yourself);
+   - use the Software to build a product that competes with Rabbinatix.
+
+3. Output the Software writes (reports, generated code, OpenAPI files and the like) is yours, as described in the
+   Rabbinatix terms.
+
+4. The Software is provided "as is", without warranty of any kind, express or implied, including the warranties of
+   merchantability, fitness for a particular purpose and non-infringement. In no event shall the authors or
+   copyright holders be liable for any claim, damages or other liability arising from, out of or in connection with
+   the Software or its use.
+
+5. This licence ends automatically if you break it. Rabbinatix may publish a new version of this licence with a new
+   version of the Software.
+
+The packages the Software depends on (typescript, yaml, prettier) keep their own licences.
